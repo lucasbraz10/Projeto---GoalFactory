@@ -74,244 +74,125 @@ def quantidade_de_times_genericos():
             
 
 def quatro_vs_quatro_4_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(4):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
+    jogadores = []
+    for i in range(16):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+4] for i in range(0, 16, 4)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
 
     chaveamento_4_times_gen()
 
 def quatro_vs_quatro_6_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        "Time E",
-        "Time F",
-        ]
+    jogadores = []
+    for i in range(24):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+4] for i in range(0, 24, 4)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
 
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(4):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
-
+    chaveamento_6_times_gen()
 
 def quatro_vs_quatro_8_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        "Time E",
-        "Time F",
-        "Time G",
-        "Time H"
-    ]
+    jogadores = []
+    for i in range(32):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+4] for i in range(0, 32, 4)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
 
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(4):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
+    chaveamento_8_times_gen()
 
 def cinco_vs_cinco_4_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(5):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
+    jogadores = []
+    for i in range(20):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+5] for i in range(0, 20, 5)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
+    chaveamento_4_times_gen()
 
 def cinco_vs_cinco_6_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        "Time E",
-        "Time F",
-        ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(5):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
-
+    jogadores = []
+    for i in range(30):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+5] for i in range(0, 30, 5)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
+    chaveamento_6_times_gen()
 
 def cinco_vs_cinco_8_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        "Time E",
-        "Time F",
-        "Time G",
-        "Time H"
-    ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(5):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
+    jogadores = []
+    for i in range(40):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+5] for i in range(0, 40, 5)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
+    chaveamento_8_times_gen()
 
 def seis_vs_seis_4_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(6):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
-    
+    jogadores = []
+    for i in range(24):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+6] for i in range(0, 24, 6)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
+    chaveamento_4_times_gen()
 
 def seis_vs_seis_6_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        "Time E",
-        "Time F",
-        ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(6):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
+    jogadores = []
+    for i in range(36):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+6] for i in range(0, 36, 6)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
+    chaveamento_6_times_gen()
     
 
 def seis_vs_seis_8_times():
-    times = [
-        "Time A",
-        "Time B",
-        "Time C",
-        "Time D",
-        "Time E",
-        "Time F",
-        "Time G",
-        "Time H"
-    ]
-
-    equipes = {}
-
-    for time in times:
-        equipes[time] = []
-
-        print(f"\nCadastro do {time}")
-
-        for i in range(6):
-            nome = input(f"Jogador {i+1}: ")
-            equipes[time].append(nome)
-
-    print("\n=== EQUIPES ===")
-
-    for time, jogadores in equipes.items():
-        print(f"{time}: {jogadores}")
+    jogadores = []
+    for i in range(48):
+        nome = input(f"Digite o nome do jogador {i+1}: ")
+        jogadores.append(nome)
+    random.shuffle(jogadores)
+    times = [jogadores[i:i+6] for i in range(0, 48, 6)]
+    for i, time in enumerate(times, start=1):
+        print(f"\nTime {i}:")
+        for jogador in time:
+            print("-", jogador)
+    chaveamento_8_times_gen()
     
 def quantidade_de_jogadores():
     while True:
