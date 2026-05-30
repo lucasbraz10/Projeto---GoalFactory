@@ -46,20 +46,15 @@ def atualizar_time():
     if conexao:
         try:
             cursor = conexao.cursor()
-            
-            time_uptd = input("Digite o nome do time que deseja atualizar: ")
-            
-            cursor.execute("SELECT id_time FROM tbl_times WHERE nome_time = %s", (time_uptd,))
-            ids = cursor.fetchone()
-            for id in ids:
-                id_time = id
+            listar_time()
+            id_time = input("Digite o ID do time que deseja atualizar: ")
             novo_nome = input("Digite o nome atualizado do time: ")
             cursor.execute("""
                 UPDATE tbl_times SET nome_time = %s WHERE id_time = %s
                 """,(novo_nome, id_time))
             conexao.commit()
             
-            print ("\n Time atualizado com sucesso!")
+            print("\n Time atualizado com sucesso!")
             
         except Exception as erro:
             conexao.rollback()
@@ -75,13 +70,9 @@ def excluir_time():
 
     if conexao:
         try:
+            listar_time()
             cursor = conexao.cursor()
-            time_delete = input("Digite o nome do time que deseja excluir: ")
-            
-            cursor.execute("SELECT id_time FROM tbl_times WHERE nome_time = %s", (time_delete,))
-            ids = cursor.fetchone()
-            for id in ids:
-                id_time = id
+            id_time = input("Digite o ID do time que deseja excluir: ")
             cursor.execute("DELETE FROM tbl_times WHERE id_time = %s", (id_time,))
             conexao.commit()
             

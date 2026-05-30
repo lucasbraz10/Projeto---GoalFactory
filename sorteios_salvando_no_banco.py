@@ -52,17 +52,17 @@ def chaveamento_4_times():
 def chaveamento_6_times():
     conexao = conectar()
     if conexao:
-        
+        limite = limite_id()
         print("======TIMES DISPONÍVEIS PARA SORTEIO======")
         listar_time()
         print("==========================================")
         print("Digite o ID do time que deseja sortear:")
-        id_time1 = validar_id("ID 1: ", 8)
-        id_time2 = validar_id("ID 2: ", 8)
-        id_time3 = validar_id("ID 3: ", 8)
-        id_time4 = validar_id("ID 4: ", 8)
-        id_time5 = validar_id("ID 5: ", 8)
-        id_time6 = validar_id("ID 6: ", 8)
+        id_time1 = validar_id("ID 1: ", limite)
+        id_time2 = validar_id("ID 2: ", limite)
+        id_time3 = validar_id("ID 3: ", limite)
+        id_time4 = validar_id("ID 4: ", limite)
+        id_time5 = validar_id("ID 5: ", limite)
+        id_time6 = validar_id("ID 6: ", limite)
 
         cursor = conexao.cursor()
         cursor.execute(
@@ -75,11 +75,11 @@ def chaveamento_6_times():
         random.shuffle(times)
         grupo_a = times[:3]
         grupo_b = times[3:]
-        print("======GRUPO A======")
+        print("======PARTIDAS DO GRUPO A======")
         for time1 in range(len(grupo_a)):
             for time2 in range(time1 + 1, len(grupo_a)):
                 print(f"{grupo_a[time1][0]} X {grupo_a[time2][0]}")
-        print("======GRUPO B======")
+        print("======PARTIDAS DO GRUPO B======")
         for time1 in range(len(grupo_b)):
             for time2 in range(time1 + 1, len(grupo_b)):
                 print(f"{grupo_b[time1][0]} X {grupo_b[time2][0]}")
@@ -94,18 +94,19 @@ def chaveamento_6_times():
 def chaveamento_8_times():
     conexao = conectar()
     if conexao:
+        limite = limite_id()
         print("======TIMES DISPONÍVEIS PARA SORTEIO======")
         listar_time()
         print("==========================================")
         print("Digite o ID do time que deseja sortear:")
-        id_time1 = validar_id("ID 1: ", 8)
-        id_time2 = validar_id("ID 2: ", 8)
-        id_time3 = validar_id("ID 3: ", 8)
-        id_time4 = validar_id("ID 4: ", 8)
-        id_time5 = validar_id("ID 5: ", 8)
-        id_time6 = validar_id("ID 6: ", 8)
-        id_time7 = validar_id("ID 7: ", 8)
-        id_time8 = validar_id("ID 8: ", 8)
+        id_time1 = validar_id("ID 1: ", limite)
+        id_time2 = validar_id("ID 2: ", limite)
+        id_time3 = validar_id("ID 3: ", limite)
+        id_time4 = validar_id("ID 4: ", limite)
+        id_time5 = validar_id("ID 5: ", limite)
+        id_time6 = validar_id("ID 6: ", limite)
+        id_time7 = validar_id("ID 7: ", limite)
+        id_time8 = validar_id("ID 8: ", limite)
 
         cursor = conexao.cursor()
         cursor.execute(
